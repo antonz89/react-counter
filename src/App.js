@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // need bellow for version 2
 import { addOne,reduceOne } from './components/AddReduceFunc';
+import ImageMaker from './components/ImageMaker';
 //---------------------------------------------------------------
 
 // need for version 3
@@ -42,17 +43,16 @@ function App() {
   return (
     <div className="App">
       <Container >
-      <Row id='one'>
+      
+        <Row id='one'>
 
-          <Col>
-            <h1 class="text-center">ZOGO</h1>
-            
-          </Col>
+            <Col>
+              <h1 class="text-center">ZOGO</h1>
+            </Col>
 
-          <Col>
-            <h1 class="text-center">MENU</h1>
-            
-          </Col>
+            <Col>
+              <h1 class="text-center">MENU</h1>
+            </Col>
 
         </Row>
         
@@ -65,7 +65,6 @@ function App() {
           </Col>
 
           <Col>
-            
             <div className="border d-flex justify-content-center">
               <h1 id='count'>{count}</h1>
             </div>
@@ -75,7 +74,6 @@ function App() {
             <div className="d-flex justify-content-start">
               <Button id="button2" onClick={addOne}>add 1</Button>
             </div>
-          
           </Col>
 
         </Row>
@@ -83,8 +81,7 @@ function App() {
         <Row id='row-three'>
             <Col>
               <div className="border d-flex justify-content-center">
-
-                hi
+                <ImageMaker count={count}/>
 
               </div>
             </Col>
